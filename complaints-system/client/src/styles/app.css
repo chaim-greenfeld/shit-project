@@ -1,0 +1,65 @@
+body {
+    background-color: rgba(128, 128, 128, 0.486);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+    min-height: 80px;
+}
+
+
+
+
+main > div {
+
+    display: flex;
+    flex-direction: column;
+    gap:30px;
+
+    align-items: center;
+    background-color: white;
+    max-width: 800px;
+    margin: 10px auto;
+    min-height: 180px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+main > div > div {
+    border-bottom: 1px solid black;
+    font-size: 25px;
+}
+
+
+.green {
+    background-color: greenyellow;
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.blue {
+    background-color: rgba(0, 0, 255, 0.507);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+table {
+    max-width: 750px;
+    margin: 10px auto;
+}
+
+th, td {
+  padding: 20px; 
+
+  text-align: center;
+  border-bottom: 1px solid #ddd; 
+}

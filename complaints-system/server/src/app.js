@@ -1,21 +1,32 @@
 import express from 'express'
+import cors from 'cors';
 import 'dotenv/config';
 
 
 import userRoutes from './routes/complaints.routes.js'
+import authRoute from './routes/admin.route.js'
 
-const PORT = process.env.PORT || 5000;
 
-const app = express()
+import { getMongoConnection } from './db/connect.js';
+
+const PORT = process.env.PORT;
+
+await getMongoConnection();
+
+
+
+
+const app = express();
 
 app.use(express.json())
 
+app.use(cors());
 
+app.use('/api/admin/login', authRoute)
 
 app.use('/api/complaints', userRoutes)
 
 
-app.use('/api/admin/login', () => {})
 
 
 

@@ -2,12 +2,11 @@ import express from 'express'
 const router = express.Router();
 
 
-router.post('/', (req, res) => {
-    res.send('its post')
-})
+import { createComplaints, getAllComplaints } from '../controllers/complaints.controller.js';
+import { authMiddleware } from '../controllers/adminLogin.controller.js';
 
-router.get('/', (req, res) => {
-    res.send(`User profile for ID: ${req.params.id}`);
-})
+router.post('/', createComplaints)
+
+router.get('/', authMiddleware, getAllComplaints)
 
 export default router;
